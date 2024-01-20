@@ -1,7 +1,14 @@
-import "./App.css";
+import MainLayout from "./components/layout/MainLayout";
+import ProtectedRoute from "./components/layout/ProtectedRoute";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <ProtectedRoute>
+        <MainLayout />
+      </ProtectedRoute>
+    </>
+  );
 }
 
 export default App;
