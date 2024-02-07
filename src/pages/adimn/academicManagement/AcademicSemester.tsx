@@ -7,7 +7,7 @@ import { useGetAllSemestersQuery } from "../../../redux/features/admin/academicM
 
 type TTableDataType = Pick<
   TAcademicSemester,
-  "_id" | "name" | "startMonth" | "endMonth" | "year"
+  "name" | "startMonth" | "endMonth" | "year"
 >;
 
 const AcademicSemester = () => {
@@ -32,6 +32,7 @@ const AcademicSemester = () => {
     {
       title: "Name",
       dataIndex: "name",
+      key: "name",
       filters: [
         {
           text: "Autumn",
@@ -50,6 +51,7 @@ const AcademicSemester = () => {
     {
       title: "Year",
       dataIndex: "year",
+      key: "year",
       filters: [
         {
           text: "2024",
@@ -72,13 +74,16 @@ const AcademicSemester = () => {
     {
       title: "Start Month",
       dataIndex: "startMonth",
+      key: "startMonth",
     },
     {
       title: "End Month",
       dataIndex: "endMonth",
+      key: "endMonth",
     },
     {
       title: "Action",
+      key: "x",
       render: () => {
         return (
           <div>
